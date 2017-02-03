@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ButtonXaml.SecondPage">
+
+	<StackLayout HorizontalOptions="Fill">
+		<SearchBar TextChanged="Handle_TextChanged" BackgroundColor="#0a3456" Placeholder="search" HorizontalOptions="Fill" x:Name="searchBar" />
+		<ListView BackgroundColor="White" x:Name="list" HasUnevenRows="true" ItemTapped="Handle_Clicked"> 
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell Tapped="Handle_Tapped">
+					<StackLayout Padding="20">
+						<Label x:Name="labelName" TextColor="Black" Text="{Binding Name}" />
+						<Label x:Name="labelWork" FontSize="12" TextColor="Gray" Text="{Binding Work}" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+	</StackLayout>
+
+</ContentPage>

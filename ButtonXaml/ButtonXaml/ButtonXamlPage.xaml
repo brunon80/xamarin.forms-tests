@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ButtonXaml.ButtonXamlPage">
+	<ContentPage.Content>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name = "Scan"></ToolbarItem>
+        <ToolbarItem x:Name = "Settings"></ToolbarItem>
+   </ContentPage.ToolbarItems>
+	<StackLayout
+			x:Name="testLayout"
+			HorizontalOptions="Fill"
+			VerticalOptions="Fill"
+			Orientation="Vertical"
+			>
+		<StackLayout 
+				Orientation="Horizontal"
+				HorizontalOptions="Center" 
+				VerticalOptions="Center" 
+				>
+				<StackLayout>
+					<Image 
+						x:Name="img" 
+						Source="https://media3.giphy.com/media/IjjqQvfFpSSxG/200_s.gif" 
+						Opacity="0"/>
+				</StackLayout>
+				<StackLayout>
+					<Label Text="Bora poha clica!" TextColor="Gray" x:Name="label"/>
+					<Button 
+						TextColor="White"
+						BackgroundColor="Gray" 
+						Text="Tap for click count!"
+			            Clicked="OnButtonClicked" 
+						x:Name="btn"/>
+				</StackLayout>
+		</StackLayout>
+	    <StackLayout Padding="20">
+			<Button BackgroundColor="Gray" Clicked="Handle_Clicked" Text="Go to second Screem" TextColor="White" />
+		</StackLayout>
+
+	</StackLayout>
+		
+  
+</ContentPage>
